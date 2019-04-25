@@ -7,14 +7,15 @@ server:
   port: 8095
 
 spring:
+  rabbitmq:
+    host: '192.168.21.130'
+    port: 5672
+    username: 'admin'
+    password: 'admin'
   profiles: dev
   application:
     name: xhh-message-client
-  rabbitmq:
-    host: 192.168.21.130
-    port: 5672
-    username: admin
-    password: admin
+
 eureka:
   client:
     service-url:
