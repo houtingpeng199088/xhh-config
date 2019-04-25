@@ -1,0 +1,127 @@
+spring:
+  profiles:
+    active: dev
+
+feign:
+  hystrix:
+    enabled: true
+
+info:
+  app.name: Ocash
+  company.name: www.Ocash.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+debug: true
+---
+server:
+  port: 8001
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.xhh.coreapi.service.demo.entity    # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+
+spring:
+  profiles: dev
+  application:
+    name: xhh-coreapi    
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://192.168.21.110:3306/clouddb01              # 数据库名称
+    username: root
+    password: 1qaz@2wsx
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+      
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      registry-fetch-interval-seconds: 30
+  instance:
+    instance-id: xhh-coreapi-8001
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true
+
+
+--- 
+
+server:
+  port: 8001
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.xhh.coreapi.service.demo.entity    # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+
+spring:
+  profiles: test
+  application:
+    name: xhh-coreapi    
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://192.168.21.110:3306/clouddb01              # 数据库名称
+    username: root
+    password: 1qaz@2wsx
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+      
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      registry-fetch-interval-seconds: 30
+  instance:
+    instance-id: xhh-coreapi-8001
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true
+    
+
+---
+server:
+  port: 8001
+
+
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.xhh.coreapi.service.demo.entity    # 所有Entity别名类所在包
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml                       # mapper映射文件
+
+spring:
+  profiles: prod
+  application:
+    name: xhh-coreapi    
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
+    driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
+    url: jdbc:mysql://192.168.21.110:3306/clouddb01              # 数据库名称
+    username: root
+    password: 1qaz@2wsx
+    dbcp2:
+      min-idle: 5                                           # 数据库连接池的最小维持连接数
+      initial-size: 5                                       # 初始化连接数
+      max-total: 5                                          # 最大连接数
+      max-wait-millis: 200                                  # 等待连接获取的最大超时时间
+      
+eureka:
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      registry-fetch-interval-seconds: 30
+  instance:
+    instance-id: xhh-coreapi-8001
+    lease-renewal-interval-in-seconds: 5
+    prefer-ip-address: true

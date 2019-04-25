@@ -16,8 +16,10 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+    registry-fetch-interval-seconds: 30
   instance:
     instance-id: gateway-9001.com
+    lease-renewal-interval-in-seconds: 5
     prefer-ip-address: true
  
  
@@ -57,8 +59,10 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+    registry-fetch-interval-seconds: 30
   instance:
     instance-id: gateway-9001.com
+    lease-renewal-interval-in-seconds: 5
     prefer-ip-address: true
  
  
