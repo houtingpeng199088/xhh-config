@@ -1,0 +1,47 @@
+﻿spring:
+  profiles:
+    active: dev
+
+---
+server:
+  port: 8091
+  
+
+spring:
+   profiles: dev
+   application:
+    name: xhh-message-client
+   rabbitmq:
+    host: 192.168.21.130
+    port: 5672
+    username: admin
+    password: admin
+
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: xhh-message.com
+    prefer-ip-address: true
+
+--- 
+
+server:
+  port: 8091
+  
+
+spring:
+   profiles: test
+   application:
+    name: xhh-message-client
+
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+  instance:
+    instance-id: xhh-message.com
+    prefer-ip-address: true
