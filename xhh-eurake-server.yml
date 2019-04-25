@@ -8,7 +8,7 @@ server:
   port: 7001
   
 spring:
-  profiles: dev
+  profiles: dev7001
   application:
     name: eureka7001.com
 
@@ -34,7 +34,7 @@ server:
   port: 7001
   
 spring:
-  profiles: test
+  profiles: test7001
   application:
     name: eureka7001.com
 
@@ -60,7 +60,7 @@ server:
   port: 7002
   
 spring:
-  profiles: dev
+  profiles: dev7002
   application:
     name: eureka7002.com
 
@@ -86,7 +86,7 @@ server:
   port: 7002
   
 spring:
-  profiles: test
+  profiles: test7002
   application:
     name: eureka7002.com
 
@@ -112,7 +112,7 @@ server:
   port: 7003
   
 spring:
-  profiles: dev
+  profiles: dev7003
   application:
     name: eureka7003.com
 
@@ -138,7 +138,7 @@ server:
   port: 7003
   
 spring:
-  profiles: test
+  profiles: test7003
   application:
     name: eureka7003.com
 
