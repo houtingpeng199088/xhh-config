@@ -1,0 +1,83 @@
+spring:
+  profiles:
+    active: dev
+
+---
+server:
+  port: 9001
+
+spring:
+  profiles: dev
+  application:
+    name: xhh-zuul-gateway
+
+ 
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+  instance:
+    instance-id: gateway-9001.com
+    prefer-ip-address: true
+ 
+ 
+zuul:
+  prefix: /Ocash
+  ignored-services: "*"
+  routes:
+    mydept.serviceId: xhh-provider-dept
+    mydept.path: /**
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+info:
+  app.name: Ocash
+  company.name: www.Ocash.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
+
+
+--- 
+
+server:
+  port: 9001
+
+spring:
+  profiles: test
+  application:
+    name: xhh-zuul-gateway
+   
+eureka: 
+  client: 
+    service-url: 
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka  
+  instance:
+    instance-id: gateway-9001.com
+    prefer-ip-address: true
+ 
+ 
+zuul:
+  prefix: /Ocash
+  ignored-services: "*"
+  routes:
+    mydept.serviceId: xhh-provider-dept
+    mydept.path: /**
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+info:
+  app.name: Ocash
+  company.name: www.Ocash.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
