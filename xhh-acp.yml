@@ -28,7 +28,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://192.168.21.110:3306/clouddb01              # 数据库名称
+    url: jdbc:mysql://192.168.21.110:3306/clouddb01?characterEncoding=utf8              # 数据库名称
     username: root
     password: 1qaz@2wsx
     dbcp2:
@@ -66,7 +66,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://192.168.21.110:3306/clouddb01              # 数据库名称
+    url: jdbc:mysql://192.168.21.110:3306/clouddb01?characterEncoding=utf8              # 数据库名称
     username: root
     password: 1qaz@2wsx
     dbcp2:
@@ -103,7 +103,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://192.168.21.110:3306/clouddb01              # 数据库名称
+    url: jdbc:mysql://192.168.21.110:3306/clouddb01?characterEncoding=utf8              # 数据库名称
     username: root
     password: 1qaz@2wsx
     dbcp2:
