@@ -8,10 +8,10 @@ server:
   
 
 spring:
-   profiles: dev
-   application:
+  profiles: dev
+  application:
     name: xhh-message-client
-   rabbitmq:
+  rabbitmq:
     host: 192.168.21.130
     port: 5672
     username: admin
@@ -33,8 +33,8 @@ server:
   
 
 spring:
-   profiles: test
-   application:
+  profiles: test
+  application:
     name: xhh-message-client
 
       
