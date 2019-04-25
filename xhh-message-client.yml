@@ -1,11 +1,10 @@
-﻿spring:
+spring:
   profiles:
     active: dev
 
 ---
 server:
   port: 8095
-  
 
 spring:
   profiles: dev
@@ -16,8 +15,6 @@ spring:
     port: 5672
     username: admin
     password: admin
-
-      
 eureka:
   client:
     service-url:
@@ -31,13 +28,11 @@ eureka:
 server:
   port: 8096
   
-
 spring:
   profiles: test
   application:
     name: xhh-message-client
-
-      
+   
 eureka:
   client:
     service-url:
